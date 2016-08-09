@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: lightgrey;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  height: auto;
+  vertical-align: middle;
+}
+
+.o-c {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 58em;
+  padding: 1em;
+}
+
+.c-crd {
+  float: left;
+  display: inline-block;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  font-size: 16px;
+  line-height: 24px;
+}
+.c-crds {
+  margin-left: -1em;
+}
+.c-crds:before, .c-crds:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.c-crds:after {
+  clear: both;
+}
+@media screen and (min-width: 38em) {
+  .c-crd {
+    width: 50%;
+  }
+}
+a.c-crd {
+  color: black;
+  text-decoration: none;
+}
+.c-crd__wrap {
+  overflow: hidden;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+@media screen and (min-width: 38em) {
+  .c-crd__wrap {
+    height: 23em;
+  }
+}
+.c-crd__img {
+  position: relative;
+  padding-top: 66.66667%;
+  display: block;
+  overflow: hidden;
+}
+.c-crd__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 0\0) {
+  .c-crd__img img {
+    height: auto;
+  }
+}
+_:-ms-input-placeholder .c-crd__img img, :root .c-crd__img img {
+  height: auto;
+}
+.c-crd__btm {
+  padding: 1em;
+}
