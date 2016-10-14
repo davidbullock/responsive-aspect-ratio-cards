@@ -38,15 +38,25 @@ img {
 	padding: 1em;
 }
 
-// Images
+// Photo/Video Aspect Ratio Fractions
 $landscape-2-3: 2/3;
+$landscape-3-4: 3/4;
 $landscape-4-6: 4/6;
+$landscape-5-7: 5/7;
+$landscape-8-10: 8/10;
 $widescreen-16-9: 9/16;
+$widescreen-1-85-1: 100/185;
+$widescreen-1-6-1: 10/16;
+$portrait-2-3: 3/2;
+$portrait-4-6: 6/4;
+$square-1-1: 1/1;
 
 // Cards
-$card-height: 23em;
+$card-height: 23em; // adjust this to suit your own preference
 $card-aspect-ratio: $landscape-2-3;
 // $card-aspect-ratio: $widescreen-16-9;
+// $card-aspect-ratio: $widescreen-1-85-1;
+// $card-aspect-ratio: $widescreen-1-6-1;
 $cards-per-row: 2;
 $cards-per-row-break: 1;
 
@@ -58,16 +68,17 @@ $cards-per-row-break: 1;
 		@include clear;
 	}
 	
-	float: left;
 	display: inline-block;
 	padding-left: 1em;
 	padding-bottom: 1em;
 	font-size: 16px;
 	line-height: (16px * 1.5);
+	// float: left;
 	// width: (100% / $cards-per-row-break);
 	
 	@media screen and (min-width: 38em) {
 		width: (100% / $cards-per-row);
+		float: left;
 	}
 	
 	// a.c-crd
