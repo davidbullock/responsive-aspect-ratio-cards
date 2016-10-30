@@ -1,3 +1,4 @@
+@import "bourbon";
 @mixin clear {
 	&:before,
 	&:after {
@@ -10,32 +11,11 @@
 	}
 }
 
-* {
-	box-sizing: border-box;
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
-}
-
-body {
-	font-size: 16px;
-	background-color: lightgrey;
-	font-family: $helvetica;
-}
-
 img {
 	max-width: 100%;
 	border: 0;
 	height: auto;
 	vertical-align: middle;
-}
-
-.o-c {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 58em;
-	padding: 1em;
 }
 
 // Photo/Video Aspect Ratio Fractions
@@ -52,7 +32,7 @@ $portrait-4-6: 6/4;
 $square-1-1: 1/1;
 
 // Cards
-$card-height: 23em; // adjust this to suit your own preference
+$card-height: 24em; // adjust this to suit your own preference
 $card-aspect-ratio: $landscape-2-3;
 // $card-aspect-ratio: $widescreen-16-9;
 // $card-aspect-ratio: $widescreen-1-85-1;
@@ -68,23 +48,16 @@ $cards-per-row-break: 1;
 		@include clear;
 	}
 	
+	float: left;
 	display: inline-block;
 	padding-left: 1em;
 	padding-bottom: 1em;
 	font-size: 16px;
 	line-height: (16px * 1.5);
-	// float: left;
-	// width: (100% / $cards-per-row-break);
+	width: (100% / $cards-per-row-break);
 	
 	@media screen and (min-width: 38em) {
 		width: (100% / $cards-per-row);
-		float: left;
-	}
-	
-	// a.c-crd
-	@at-root a#{&} {
-		color: black;
-		text-decoration: none;
 	}
 	
 	// .c-crd__wrap
@@ -93,6 +66,17 @@ $cards-per-row-break: 1;
 		border-radius: 0.5em;
 		background-color: white;
 		box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+		
+		// a.c-crd__wrap
+		@at-root a#{&} {
+			display: block;
+			color: slategrey;
+			text-decoration: none;
+			
+			&:hover {
+				color: black;
+			}
+		}
 		
 		@media screen and (min-width: 38em) {
 			height: $card-height;
@@ -106,6 +90,7 @@ $cards-per-row-break: 1;
 		display: block;
 		overflow: hidden;
 
+		// .c-crd__img img
 		img {
 			position: absolute;
 			top: 0;
@@ -133,4 +118,29 @@ $cards-per-row-break: 1;
 	&__btm {
 		padding: 1em;
 	}
+}
+
+* {
+	box-sizing: border-box;
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+body {
+	font-size: 16px;
+	background-color: lightslategrey;
+	font-family: $helvetica;
+}
+
+h1 {
+	color: white;
+}
+
+.o-c {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 58em;
+	padding: 1em;
 }
