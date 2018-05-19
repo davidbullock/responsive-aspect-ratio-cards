@@ -26,8 +26,19 @@ img {
   clear: both;
 }
 @media screen and (min-width: 38em) {
+  .c-crds {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 38em) {
   .c-crd {
+    display: flex;
+    flex: 1 1 100%;
     width: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 .c-crd__wrap {
@@ -35,6 +46,7 @@ img {
   border-radius: 0.5em;
   background-color: white;
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 a.c-crd__wrap {
   display: block;
@@ -46,12 +58,12 @@ a.c-crd__wrap:hover {
 }
 @media screen and (min-width: 38em) {
   .c-crd__wrap {
-    height: 24em;
+    height: auto;
   }
 }
 .c-crd__img {
   position: relative;
-  padding-top: 66.66667%;
+  padding-top: 52.3560209424%;
   display: block;
   overflow: hidden;
 }
@@ -88,7 +100,7 @@ _:-ms-input-placeholder .c-crd__img img, :root .c-crd__img img {
 body {
   font-size: 16px;
   background-color: lightslategrey;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
